@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import Product from "./Products/Product";
+import Product from "../Products/Product";
 import "./Shop.css"
 import OrderSummary from "../component/OrderSummary";
 
 
 function Shop() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart]= useState();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -13,6 +14,11 @@ function Shop() {
       .then((data) => setProducts(data));
   }, []);
 
+  const handleAddToCart = () => {
+    console.log("product added")
+    setCart("mission done")
+  }
+  
   return (
     <div className="flex justify-center "> 
       <div>
@@ -20,11 +26,11 @@ function Shop() {
         <div className="shop-container">
           <div className="grid grid-cols-4 gap-12 my-12">
           {products.map((product) => (
-            <Product key={product.id} product={product}></Product>
+            <Product key={product.id} product={product} handleAddToCart={handleAddToCart}></Product>
           ))}
           </div>
           <div className="bg-orange-200 my-12 rounded-md">
-            <OrderSummary></OrderSummary>
+            <OrderSummary cart={cart}></OrderSummary>
           </div>
         </div>
       </div>
