@@ -16,7 +16,7 @@ const Product = ({ product }) => {
         <p><span className="text-md font-serif">Category:</span> {category}</p>
         <p><span className="text-md font-serif">Rating:</span> {rating.rate}</p>
       </div>
-      <Link className="bottom-4 right-4">Details</Link>
+      <a className="absolute bottom-4 right-4 underline cursor-pointer text-orange-600">Details</a>
     </div>
   );
 };
