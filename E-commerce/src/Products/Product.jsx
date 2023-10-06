@@ -3,14 +3,14 @@ import React from "react";
 const Product = ({ product, handleAddToCart }) => {
   const { id, title, price, description, category, image, rating} = product;
   return (
-    <div className="border rounded-md h-[34rem] w-80 relative ">
+    <div className="border rounded-md h-[30rem] w-80 relative ">
       <div className="flex flex-col items-center">
         <div className="my-2">
           <img className="h-56 px-4" src={image} alt="" />
         </div>
-        <h2 className="my-4 text-lg font-bold px-4">{title}</h2>
+        <h2 className="my-4 text-md font-bold px-2 ">{title}</h2>
       </div>
-      <div className="ml-4 absolute bottom-20 text-cyan-800">
+      <div className="ml-4 absolute bottom-16 text-cyan-800">
         <p>
           <span className="text-md font-serif">Price:</span> {price}&euro;
         </p>
