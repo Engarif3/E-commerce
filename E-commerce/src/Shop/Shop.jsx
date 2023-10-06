@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import Product from "./Product";
-import "./App.css"
+import Product from "./Products/Product";
+import "./Shop.css"
+import OrderSummary from "../component/OrderSummary";
 
-function App() {
+
+function Shop() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ function App() {
           ))}
           </div>
           <div className="bg-orange-200 my-12 rounded-md">
-            <h2 className="text-center font-bold my-12">Order Summary</h2>
+            <OrderSummary></OrderSummary>
           </div>
         </div>
       </div>
@@ -30,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Shop;

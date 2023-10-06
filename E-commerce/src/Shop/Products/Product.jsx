@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { id, title, price, description, category, image, rating } = product;
   return (
-    <div className="border rounded-md h-[30rem] w-80 relative ">
+    <div className="border rounded-md h-[34rem] w-80 relative ">
       <div className="flex flex-col items-center">
-        <div className="my-4">
+        <div className="my-2">
           <img className="h-56 px-4" src={image} alt="" />
         </div>
         <h2 className="my-4 text-lg font-bold px-4">{title}</h2>
       </div>
-      <div className="ml-4 absolute bottom-12 text-cyan-800">
+      <div className="ml-4 absolute bottom-20 text-cyan-800">
         <p>
           <span className="text-md font-serif">Price:</span> {price}&euro;
         </p>
@@ -22,9 +21,10 @@ const Product = ({ product }) => {
           <span className="text-md font-serif">Rating:</span> {rating.rate}
         </p>
       </div>
-      <a className="absolute bottom-4 right-4 underline cursor-pointer text-orange-600">
+      <a className="absolute bottom-14 right-4 underline cursor-pointer text-orange-600">
         Details
       </a>
+      <button className="py-2 border-x rounded-b-md bg-orange-400 absolute w-full bottom-0 text-white font-bold hover:bg-orange-600">ADD TO CART</button>
     </div>
   );
 };
