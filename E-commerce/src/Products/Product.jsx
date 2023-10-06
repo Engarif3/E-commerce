@@ -21,10 +21,10 @@ const Product = ({ product, handleAddToCart }) => {
           <span className="text-md font-serif">Rating:</span> {rating.rate}
         </p>
       </div>
-      <a className="absolute bottom-14 right-4 underline cursor-pointer text-orange-600">
+      <a className="absolute bottom-14 right-4 underline cursor-pointer text-orange-700">
         Details
       </a>
-      <button onClick={handleAddToCart} className="py-2 border-x rounded-b-md bg-orange-400 absolute w-full bottom-0 text-white font-bold hover:bg-orange-600">ADD TO CART</button>
+      <button onClick={handleAddToCart} className="py-2 border-x rounded-b-md bg-orange-400 absolute w-full bottom-0 text-white font-bold hover:bg-orange-700">ADD TO CART</button>
     </div>
   );
 };
