@@ -12,11 +12,19 @@ const Product = ({ product }) => {
         <h2 className="my-4 text-lg font-bold px-4">{title}</h2>
       </div>
       <div className="ml-4 absolute bottom-12 text-cyan-800">
-        <p><span className="text-md font-serif">Price:</span> {price} Euro</p>
-        <p><span className="text-md font-serif">Category:</span> {category}</p>
-        <p><span className="text-md font-serif">Rating:</span> {rating.rate}</p>
+        <p>
+          <span className="text-md font-serif">Price:</span> {price}&euro;
+        </p>
+        <p>
+          <span className="text-md font-serif">Category:</span> {category}
+        </p>
+        <p>
+          <span className="text-md font-serif">Rating:</span> {rating.rate}
+        </p>
       </div>
-      <a className="absolute bottom-4 right-4 underline cursor-pointer text-orange-600">Details</a>
+      <a className="absolute bottom-4 right-4 underline cursor-pointer text-orange-600">
+        Details
+      </a>
     </div>
   );
 };
