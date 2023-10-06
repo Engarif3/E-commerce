@@ -1,7 +1,7 @@
 import React from "react";
 
-const Product = ({ product }) => {
-  const { id, title, price, description, category, image, rating } = product;
+const Product = ({ product, handleAddToCart }) => {
+  const { id, title, price, description, category, image, rating} = product;
   return (
     <div className="border rounded-md h-[34rem] w-80 relative ">
       <div className="flex flex-col items-center">
@@ -24,7 +24,7 @@ const Product = ({ product }) => {
       <a className="absolute bottom-14 right-4 underline cursor-pointer text-orange-600">
         Details
       </a>
-      <button className="py-2 border-x rounded-b-md bg-orange-400 absolute w-full bottom-0 text-white font-bold hover:bg-orange-600">ADD TO CART</button>
+      <button onClick={handleAddToCart} className="py-2 border-x rounded-b-md bg-orange-400 absolute w-full bottom-0 text-white font-bold hover:bg-orange-600">ADD TO CART</button>
     </div>
   );
 };
