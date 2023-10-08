@@ -2,6 +2,7 @@ import React from 'react';
 import logo from "../../public/shop.svg"
 
 const NavBar = () => {
+    
     return (
         <div className='bg-cyan-800 text-white'>
             <nav className='flex justify-between items-center mx-28 p-2'>
