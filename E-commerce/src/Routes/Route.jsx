@@ -2,7 +2,9 @@ import {
     createBrowserRouter
   } from "react-router-dom";
 import Home from "../Home/Home";
-import Shop from "../Shop/Shop";
+import TimePick from "../TimePicker/TimePick";
+// import Shop from "../Shop/Shop";
+
 
   const router = createBrowserRouter([
     {
@@ -11,7 +13,8 @@ import Shop from "../Shop/Shop";
       children: [
         {
             path:"/",
-            element: <Shop></Shop>
+            // element: <Shop></Shop>
+            element:<TimePick></TimePick>
         }
       ]
     },
